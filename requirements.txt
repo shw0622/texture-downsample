@@ -1,0 +1,17 @@
+# 核心数值与科学计算
+numpy>=1.20
+scipy>=1.7
+
+# 可微优化（PyTorch CUDA 12.x，由 --extra-index-url 提供 CUDA 轮子）
+torch>=2.1
+
+# 图像 IO（按需要 LDR/HDR）
+imageio>=2.31
+imageio-ffmpeg>=0.4
+tifffile>=2023.7
+
+# 评估指标
+flip-evaluator>=1.5
+
+# 测试
+pytest>=7.0

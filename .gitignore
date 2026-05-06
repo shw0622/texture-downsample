@@ -1,0 +1,32 @@
+# Python build & cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtualenv & wheels
+.venv/
+venv/
+env/
+wheels/
+
+# Editor
+.idea/
+.vscode/
+
+# Local outputs（默认忽略 bench 产物，单独保留 verify_v3 作为版本快照）
+examples/out/
+examples/bricks_out/
+examples/cli_out/
+examples/bench_out/*
+!examples/bench_out/verify_v3.csv
+!examples/bench_out/verify_v3.md
+
+# 真实纹理素材体积太大，不入仓库；下载方式见 textures/README.md
+textures/*
+!textures/README.md

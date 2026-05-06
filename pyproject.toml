@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pbr-compress"
+version = "0.1.0"
+description = "PBR 纹理 2× 离线压缩管线（参见 doc.md）"
+readme = "doc.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.20",
+    "scipy>=1.7",
+    "torch>=2.1",
+    "imageio>=2.31",
+    "tifffile>=2023.7",
+]
+
+[project.optional-dependencies]
+eval = ["flip-evaluator>=1.5"]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+pbr-compress = "pbr_compress.cli:main"
+
+[tool.setuptools]
+packages = ["pbr_compress"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
