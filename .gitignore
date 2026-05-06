@@ -19,6 +19,9 @@ wheels/
 .idea/
 .vscode/
 
+# 内部设计文档（保留本地，不入仓库）
+doc.md
+
 # Local outputs（默认忽略 bench 产物，单独保留 verify_v3 作为版本快照）
 examples/out/
 examples/bricks_out/
